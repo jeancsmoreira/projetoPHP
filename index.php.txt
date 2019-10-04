@@ -1,0 +1,15 @@
+<?php 
+
+define("ip","127.0.0.1");
+$numero = 1;
+	
+echo $numero;
+echo "<br>";
+echo "Hello World";
+echo "<br>";
+echo ip;
+echo "<br>";
+echo ("O numero digitado é: " .$numero ." e o IP do 
+	  computador é: " .ip);
+
+//concatenação 
