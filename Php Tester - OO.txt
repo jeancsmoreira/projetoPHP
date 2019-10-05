@@ -1,0 +1,99 @@
+<?php 
+
+class Pessoa{ //Declaração de Classe
+	
+	private $altura = 1.80;
+	private $nome = "Jean";
+	private $telefone = "31 2222-2222";
+	private $cpf;
+	
+	public function __construct($cpf){
+		
+		echo "A classe " . __CLASS__ . "foi instanciada <br/>";  //<br/> Sempre tem de vir dentro das Aspas
+		$this -> cpf = $cpf;
+	}
+	
+	
+	public function setaltura($altura){
+		
+		$this -> altura = $altura;
+	}
+	
+	public function getaltura(){
+		
+	 	return $this ->altura . "<br>";
+	}
+	
+	public function setnome($nome){
+		
+		$this -> nome = $nome;
+	}
+	
+	public function getnome(){
+		
+	 	return $this ->nome . "<br>";
+	}
+	
+		public function settelefone($telefone){
+		
+		$this -> telefone = $telefone;
+	}
+	
+	public function gettelefone(){
+		
+	 	return $this ->telefone . "<br>";
+	}
+	
+	public function setcpf($cpf){
+		
+		$this -> cpf = $cpf;
+	}
+	
+	public function getcpf(){
+		
+	 	return $this ->cpf . "<br>";
+	}
+	
+	
+}
+
+$NovaPessoa = new Pessoa("333.333.333-33"); 
+$NovaPessoa2 = new Pessoa("444.444.444-44");
+
+var_dump($NovaPessoa); //Vejo o que tem na classe
+
+echo "<br>";
+echo $NovaPessoa ->getaltura();
+echo $NovaPessoa ->setaltura(1.8*2);
+echo $NovaPessoa ->getaltura(); // echo PRINTA!!
+echo "<br>";
+
+echo $NovaPessoa ->gettelefone();
+echo $NovaPessoa ->settelefone("31 7895-9854");
+echo $NovaPessoa ->gettelefone();
+echo "<br>";
+
+echo $NovaPessoa -> getnome();
+echo $NovaPessoa -> setnome("Lucas Vilela");
+echo $NovaPessoa -> getnome();
+echo "<br>";
+
+echo $NovaPessoa ->getcpf();
+
+
+echo $NovaPessoa2 -> getnome();
+echo $NovaPessoa2 -> setnome("Jean Carlos");
+echo $NovaPessoa2 -> getnome();
+echo "<br>";
+
+echo $NovaPessoa2 ->getcpf();
+
+echo $NovaPessoa2 ->getaltura();
+echo $NovaPessoa2 ->setaltura(1.95);
+echo $NovaPessoa2 ->getaltura(); // echo PRINTA!!
+echo "<br>";
+
+echo $NovaPessoa2 ->gettelefone();
+echo $NovaPessoa2 ->settelefone("31 9874-6324");
+echo $NovaPessoa2 ->gettelefone();
+echo "<br>";
